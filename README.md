@@ -1,5 +1,10 @@
 
-
+### Cargo.toml
+```rust
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+sqlx = { version = "0.7.4", default-features = false, features = ["runtime-tokio-rustls", "postgres"] }
+```
 
 
 ### connect to pool
