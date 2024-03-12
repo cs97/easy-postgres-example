@@ -14,3 +14,33 @@ async fn main() -> Result<(), Box<dyn Error>> {
 }
 ```
 
+
+### migrate
+```rust
+
+async fn migrate(pool: &sqlx::PgPool) -> Result<(), Box<dyn Error>> {
+	let query = "create table table_name (var1 varchar not null, var2 varchar not null, var3 varchar not null);";
+	sqlx::query(query)
+		.execute(pool)
+		.await?;
+	Ok(())
+}
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
